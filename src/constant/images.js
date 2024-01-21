@@ -6,6 +6,7 @@ import n3 from "../assets/n3.png";
 import n4 from "../assets/n4.png";
 import b1 from "../assets/begin1.jpg";
 import b2 from "../assets/begin2.jpg";
+import whatis_doctor from "../assets/doctor.png";
 
 export default {
     logo,
@@ -15,5 +16,6 @@ export default {
     n3,
     n4,
     b1,
-    b2
+    b2,
+    whatis_doctor,
 }

@@ -29,7 +29,7 @@ const Navbar = () => {
                 </div>
                 <ul className='app__navbar-smallscreen-links'>
                     <Link onClick={() => setToggleMenu(false)} className='app_navbar-link-responsive' to="/">Home</Link>
-                    <Link onClick={() => setToggleMenu(false)} className='app_navbar-link-responsive' to="/begin">Pay</Link>
+                    <Link onClick={() => setToggleMenu(false)} className='app_navbar-link-responsive' to="/begin">Consulta</Link>
                     <a onClick={() => setToggleMenu(false)} href="#whatispae">¿Qué es PAE?</a>
                     <a onClick={() => setToggleMenu(false)} href="#pros">Profesionales</a>
                 <a href="#comments">Comentarios</a>
