@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
-:root {
-  
+.load__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: var(--celeste-color);
+  color: #fff;
+}
+
+.load__container h1 {
+  font-size: 3rem;
+  font-family: var(--font-family);
 }

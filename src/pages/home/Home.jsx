@@ -1,10 +1,13 @@
 import {React, lazy} from 'react'
-
+const Navbar = lazy(() => import("../../components/navbar/Navbar"));
 const Header = lazy(() => import("../../containers/header/Header"));
 
 const Home = () => {
   return (
-    <Header/>
+    <body>
+      <Navbar />
+      <Header/>
+    </body>
   )
 }
 

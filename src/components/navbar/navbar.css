@@ -11,6 +11,8 @@
     top: 0;
     z-index: 500;
     width: 100%;
+    padding: 1rem;
+    z-index: 999999;
 }
 
 .app__navbar-buttons-container{
@@ -73,7 +75,7 @@
     transform: 0.5s ease;
 
     flex-direction: column;
-    z-index: 1100;
+    z-index: 9999;
 }
 
 .button-close-container {
@@ -107,7 +109,7 @@
 }
 
 .app__navbar-smallscreen-links a:hover {
-    background: black;
+    background: rgb(0, 116, 142);
 }
 
 @media screen and (max-width: 650px){
@@ -123,9 +125,12 @@
         display: none;
     }
 
+    .app__navbar-logo-container {
+        width: 20%;
+    }
 
     .app__navbar-logo img {
-        width: 110px;
+        width: 100%;
     }
 }
 
@@ -135,6 +140,10 @@
     }
     .app__navbar-links {
         display: none;
+    }
+
+    .app__navbar-logo-container {
+        width: 15%;
     }
 
     .app__navbar-link-container, .app__navbar-buttons-container{

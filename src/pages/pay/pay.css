@@ -8,7 +8,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 700;
+    z-index: 50;
     background: var(--celeste-color);
     border-radius: 5px;
     color: #fff;
@@ -115,7 +115,6 @@
     display: flex;
     align-self: center;
     justify-content: center;
-    z-index: 100000000;
 }
 
 .pagar__container {
@@ -201,4 +200,34 @@
     position: absolute;
     background: rgba(0, 92, 112, 0.8);
     z-index: 800;
+}
+
+@media screen and (max-width: 650px) {
+    .begin__form-container {
+        padding: 1rem;
+        gap: .1rem;
+        width: 90%;
+    }
+    .option__container {
+        flex-direction: column;
+    }
+    .begin__form-2 {
+        gap: .5rem;
+    }
+
+}
+
+@media screen and (max-width: 1350px) {
+    .begin__form-container {
+        padding: 1rem;
+        gap: .1rem;
+        width: 90%;
+    }
+    .option__container {
+        flex-direction: column;
+    }
+    .begin__form-2 {
+        gap: .5rem;
+    }
+
 }
