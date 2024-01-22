@@ -1,0 +1,144 @@
+.pro__container {
+    background: var(--celeste-color);
+    color: #fff;
+    display: flex;
+    padding: 5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stars__container {
+    display: flex;
+    gap: .5rem;
+}
+
+.cards__container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#menos {
+    display: none;
+}
+
+.pro__title {
+    width: 100%;
+}
+
+.pro__title h3 {
+    font-size: 3rem;
+    letter-spacing: -0.04em;
+    font-weight: 800;
+}
+
+.pro__image-container {
+    background: white;
+    padding: 1rem;
+    margin: 1rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.pro__image-container{
+    background-repeat: no-repeat;
+    min-width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+}
+
+.ct1 {
+    background-image: url("../../assets/1.jpg");
+    background-position: center;
+    background-size: 10rem;
+}
+
+.ct2 {
+    background-image: url("../../assets/2.jpg");
+    background-position: center;
+    background-size: 7rem;
+}
+
+.ct3 {
+    background-image: url("../../assets/3.jpeg");
+    background-position: center;
+    background-size: 7rem;
+}
+
+.ct4 {
+    background-image: url("../../assets/4.png");
+    background-position: center;
+    background-size: 8.2rem;
+}
+
+.ctX {
+    background-image: url("../../assets/nofoto.jpg");
+    background-position: center;
+    background-size: 8.2rem;
+}
+
+.pro__image-container img {
+    width: 100%;
+}
+
+.card__container {
+    display: flex;
+    align-items: center;
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+.card__content h4 {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.card__container-ocultos {
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.card__button-oculto {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.card__button-oculto button {
+    font-size: 2rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    gap: 1rem;
+    font-size: 4rem;
+    color: #fff;
+}
+
+@media screen and (max-width: 650px) {
+    .pro__title h3 {
+        font-size: 2rem;
+        letter-spacing: -0.04em;
+        font-weight: 800;
+    }
+    .cards__container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    .card__container-ocultos {
+        flex-direction: column;
+    }
+    
+}

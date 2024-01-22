@@ -2,7 +2,7 @@ import {React, useState, lazy} from "react";
 import images from "../../constant/images";
 import { FaCheckCircle } from "react-icons/fa";
 import "./pay.css";
-const Navbar = lazy(() => import("../../components/navbar/Navbar"));
+const Navbar2 = lazy(() => import("../../components/navbar2/Navbar2"));
 
 const abrirTeleconsulta = () => {
   const contenedor = document.getElementById("pagarteleconsulta");
@@ -186,7 +186,7 @@ const Pay = () => {
 
   return (
     <main className="begin__main">
-      <Navbar/>
+      <Navbar2/>
       <PagarPregunta />
       <PagarTeleconsulta />
       <form onSubmit={handleSubmit} className="begin__form-container">

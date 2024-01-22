@@ -5,7 +5,11 @@ import "./header.css";
 const Header = () => {
     return (
         <header className="app__header">
-            <div className="app__header-content">
+            <div className="overlay">
+                <div className="sobre_overlay"></div>
+            </div>
+
+            <div className="app__header-bigcontainer">
                 <div className="app__header-content__title">
                     <h1>Pregúntale al Experto</h1>
                     <p>
@@ -19,6 +23,7 @@ const Header = () => {
                         <a href="#profesionales">Ver profesionales</a>
                     </div>
                 </div>
+
                 <div className="app__header-diagram">
                     <div className="app__header-diagram__content">
                         <img src={images.n1} alt="numero1" />
@@ -42,10 +47,6 @@ const Header = () => {
                 </div>
             </div>
 
-            <div className="app__header-image">
-                <div className="app__header-overlay"></div>
-                <img src={images.fondo_home} alt="background" />
-            </div>
         </header>
     );
 };

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Page404 = () => {
   return (
-    <div>Page404</div>
+    <div>Error. Pulse <a href="/"> para volver.</a></div>
   )
 }
 
