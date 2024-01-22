@@ -233,7 +233,7 @@ const Pay = () => {
 
           <div className="begin__form dos">
             <h2>Síntomas</h2>
-            <p>Seleccione síntomas: </p>
+            <p>Luego, seleccione síntomas: </p>
 
             {temaConsulta === "embarazo" && <SintomasMadre />}
             {temaConsulta === "bebe" && <SintomasBebe />}

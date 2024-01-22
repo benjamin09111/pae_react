@@ -1,3 +1,7 @@
+*{
+    font-family: var(--font-family);
+}
+
 .begin__main {
     position: relative;
     height: 100vh;
@@ -143,7 +147,7 @@
     position: absolute;
     background: white;
     color: rgb(8, 8, 8);
-    width: 60%;
+    width: 40%;
     top: 50%;
     left: 50%;
     z-index: 1000;
@@ -158,7 +162,7 @@
 }
 
 .pagar_contenedor_inputs input {
-    width: 70%;
+    width: 60%;
     padding: .3rem 1rem;
     outline: 1px solid var(--celeste-color);
     border: none;
@@ -222,6 +226,12 @@
 }
 
 @media screen and (max-width: 650px) {
+    .pagar__container {
+        width: 90%;
+    }
+    .pagar__container input {
+        width: 95%;
+    }
     .begin__form-container {
         padding: 1rem;
         gap: .1rem;
@@ -249,5 +259,10 @@
     .begin__form-2 {
         gap: .5rem;
     }
-
+    .pagar__container {
+        width: 75%;
+    }
+    .pagar__container input {
+        width: 80%;
+    }
 }
