@@ -253,10 +253,10 @@ const Pay = () => {
             <div className="begin__form-option">
               <h3>Pregúntale al Doctor</h3>
               <p>
-                <FaCheckCircle /> Respuesta en menos de 2 horas.
+                <FaCheckCircle className="circle_check"/> Respuesta en menos de 2 horas.
               </p>
               <p>
-                <FaCheckCircle /> Pedíatras, ginecólogos, médicos especialistas
+                <FaCheckCircle className="circle_check"/> Pedíatras, ginecólogos, médicos especialistas
                 en el embarazo.
               </p>
               <div className="begin__final-buton">
@@ -268,10 +268,10 @@ const Pay = () => {
             <div className="begin__form-option">
               <h3>Teleconsulta</h3>
               <p>
-                <FaCheckCircle /> Teleconsulta de 15 minutos.
+                <FaCheckCircle className="circle_check"/> Teleconsulta de 15 minutos.
               </p>
               <p>
-                <FaCheckCircle /> Expertos en el área para responder sus dudas.
+                <FaCheckCircle className="circle_check"/> Expertos en el área para responder sus dudas.
               </p>
               <div className="begin__final-buton">
                 <button onClick={abrirTeleconsulta} type="button">

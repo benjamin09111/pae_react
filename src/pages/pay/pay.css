@@ -5,13 +5,13 @@
 
 .begin__form-container {
     position: absolute;
-    top: 50%;
+    top: 42%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 50;
-    background: var(--celeste-color);
+    background: #f3f3f3;
     border-radius: 5px;
-    color: #fff;
+    color: #101010;
     padding: 5rem;
     display: flex;
     gap: 3rem;
@@ -41,10 +41,17 @@
 .begin__form-cuppon input{
     border: none;
     padding: .2rem .3rem;
+    outline: 1px solid #0787ba;
+    border-radius: 5px;
+    margin-left: 1rem;
+}
+
+.circle_check {
+    color: #0787ba;
 }
 
 .begin__form-cuppon input:focus{
-    outline: 1px solid #0787ba;;
+    outline: 2px solid #0787ba;
 }
 
 .begin__form-container-1 {
@@ -67,7 +74,15 @@
     flex-direction: column;
     gap: .4rem;
     padding: 1rem;
-    outline: 1px solid white;
+    outline: 1px solid var(--celeste-color);
+}
+
+.begin__form h2, .begin__form-2 h2 {
+    color: var(--celeste-color);
+}
+
+.begin__form p, begin__form-2 p {
+    text-decoration: underline;
 }
 
 .begin__final-buton button {
@@ -76,6 +91,9 @@
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
+    color: #fff;
+    background: var(--celeste-color);
+    outline: 1px solid #fff;
 }
 
 .begin__form div {
