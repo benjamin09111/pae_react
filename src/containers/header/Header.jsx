@@ -13,14 +13,11 @@ const Header = () => {
                 <div className="app__header-content__title">
                     <h1>Pregúntale al Experto</h1>
                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi
-                        modi quasi sequi molestias doloribus eos incidunt placeat eaque ab.
-                        Sapiente odio quisquam explicabo repellat voluptate impedit esse,
-                        praesentium facilis voluptatibus!
+                        Acompañar a las familias a tener embarazos sanos y venturosos y crianzas positivas y felices. Con la ayuda de diferentes profesionales, puedes llevar tu día a día con seguridad.
                     </p>
                     <div>
                         <a href="/begin">Iniciar consulta</a>
-                        <a href="#profesionales">Ver profesionales</a>
+                        <a href="#pros">Ver profesionales</a>
                     </div>
                 </div>
 

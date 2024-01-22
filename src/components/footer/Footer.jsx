@@ -13,10 +13,10 @@ const Footer = () => {
 
       <div className='footer__terminos'>
         <h5>Links útiles</h5>
-        <a href="https://pae.mimanualdelbebe.com/terminos-y-condiciones">Términos y Condiciones</a>
-        <a href="">Inicio</a>
-        <a href="">¿Qué es PAE?</a>
-        <a href="">Profesionales</a>
+        <a target="_blank" href="https://pae.mimanualdelbebe.com/terminos-y-condiciones">Términos y Condiciones</a>
+        <a href="/">Inicio</a>
+        <a href="#whatispae">¿Qué es PAE?</a>
+        <a href="#pros">Profesionales</a>
       </div>
 
       <div className='footer__contact-container'>

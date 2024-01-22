@@ -20,7 +20,7 @@ const Comments = () => {
             <div className='comm__content'>
                 <h4>Conoce lo que aman nuestros clientes del servicio</h4>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eos nisi reprehenderit sapiente. Blanditiis maxime molestias voluptatem accusamus culpa consequatur recusandae, asperiores ducimus, voluptates ab praesentium, quod nemo ipsum ut.
+                    Somos muy conscientes y nos preocupamos de nuestra comunidad. Es importante recibir un servicio de calidad para una crianza positiva y feliz. Nuestros valores son la <b>confianza</b>, la <b>libertad</b> y el <b>reto</b>.
                 </p>
                 <a href='/begin'> Iniciar Consulta </a>
             </div>

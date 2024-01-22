@@ -186,7 +186,6 @@ const Pay = () => {
 
   return (
     <main className="begin__main">
-      <Navbar2/>
       <PagarPregunta />
       <PagarTeleconsulta />
       <form onSubmit={handleSubmit} className="begin__form-container">

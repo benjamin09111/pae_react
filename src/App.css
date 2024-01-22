@@ -9,11 +9,17 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: var(--celeste-color);
+  background: var(--celeste-background);
   color: #fff;
 }
 
 .load__container h1 {
   font-size: 3rem;
   font-family: var(--font-family);
+}
+
+.load__container p {
+  text-align: left;
+  font-size: 1.3rem;
+  letter-spacing: 0.04em;
 }
