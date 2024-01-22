@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { FaFacebook, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import images from '../../constant/images';
 import './navbar.css';
@@ -40,7 +41,22 @@ const Navbar = () => {
                 <a href='#pros'>Profesionales</a>
                 <a href='#comments'>Comentarios</a>
             </div>
-
+            <div className='footer__contact-container special'>
+                <div className='footer__contact-c2'>
+                    <a href="https://www.facebook.com/Mimanualdelbebeyembarazo" target="_blank" rel="noopener noreferrer">
+                        <FaFacebook size={32} />
+                    </a>
+                    <a href="https://www.instagram.com/mimanualdelbebe/" target="_blank" rel="noopener noreferrer">
+                        <FaInstagram size={32} />
+                    </a>
+                    <a href="https://www.youtube.com/user/Mimanualdelbebe" target="_blank" rel="noopener noreferrer">
+                        <FaYoutube size={32} />
+                    </a>
+                    <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fmimanualdelbebe" target="_blank" rel="noopener noreferrer">
+                        <FaTwitter size={32} />
+                    </a>
+                </div>
+            </div>
             <div className='app__navbar-smallscreen'>
                 <GiHamburgerMenu
                     style={{ cursor: 'pointer' }}
@@ -80,7 +96,12 @@ const Navbar = () => {
                             <a onClick={() => setToggleMenu(false)} href='#pros'>
                                 Profesionales
                             </a>
-                            <a href='#comments'>Comentarios</a>
+                            <a onClick={() => setToggleMenu(false)} href='#comments'>
+                                Comentarios
+                            </a>
+                            <a onClick={() => setToggleMenu(false)} href='#footer'>
+                                Contacto
+                            </a>
                         </ul>
                     </div>
                 )}

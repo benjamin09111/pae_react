@@ -45,6 +45,16 @@
     outline: 1px solid #fff;
 }
 
+.footer__contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer__contact-container a {
+    color: #fff;
+}
+
 .app__navbar-buttons-container button {
     border: none;
     padding: 1rem;
@@ -139,7 +149,7 @@
         min-width: 6rem;
     }
 
-    .app__navbar-link-container, .app__navbar-buttons-container{
+    .app__navbar-link-container, .app__navbar-buttons-container, .special{
         display: none;
     }
 
@@ -164,7 +174,7 @@
         width: 15%;
     }
 
-    .app__navbar-link-container, .app__navbar-buttons-container{
+    .app__navbar-link-container, .app__navbar-buttons-container, .special{
         display: none;
     }
 
