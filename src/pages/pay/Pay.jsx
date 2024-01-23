@@ -2,7 +2,6 @@ import { React, useState, lazy } from "react";
 import images from "../../constant/images";
 import { FaCheckCircle } from "react-icons/fa";
 import "./pay.css";
-const Navbar2 = lazy(() => import("../../components/navbar2/Navbar2"));
 
 const abrirTeleconsulta = () => {
   const contenedor = document.getElementById("pagarteleconsulta");

@@ -1,0 +1,13 @@
+.contenedor {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family);
+}
+
+.volver_a {
+    color: var(--color-celeste);
+    text-decoration: none;
+}

@@ -41,6 +41,15 @@ const verMenos = () => {
     icono2.style.display = "none";
 }
 
+
+const NoProfileUser = ({ nombre, pais, especialidad }) => {
+    return (
+        <div className='card__container'>
+            <div className="pro__image-container ctX"></div>
+            <Content nombre={nombre} pais={pais} especialidad={especialidad} />
+        </div>
+    )
+}
 const Pro = () => {
     return (
         <div className='pro__container' id='pros'>
@@ -70,70 +79,20 @@ const Pro = () => {
                     <Content nombre="Andrés Felipe Jimenez" pais="Colombia, Villavicencio" especialidad="Pediatra" />
                 </div>
 
-                <div className='card__container'>
-                    <div className="pro__image-container ctX"></div>
-                    <Content nombre="Daniel Rojas" pais="Colombia, Facatativa"
-                        especialidad="Pediatra" />
-                </div>
-
-                <div className='card__container'>
-                    <div className="pro__image-container ctX"></div>
-                    <Content nombre="Henry Cabrera" pais="Chile"
-                        especialidad="Pediatra" />
-                </div>
-
-                <div className='card__container'>
-                    <div className="pro__image-container ctX"></div>
-                    <Content nombre="Paola Cruz" pais="Colombia, Popayan" especialidad="Pediatra" />
-                </div>
+                <NoProfileUser nombre="Daniel Rojas" pais="Colombia, Facatativa" especialidad="Pediatra" />
+                <NoProfileUser nombre="Henry Cabrera" pais="Chile" especialidad="Pediatra" />
+                <NoProfileUser nombre="Paola Cruz" pais="Colombia, Popayan" especialidad="Pediatra" />
 
                 <div className='card__container-ocultos' id='ocultos'>
-                    <div className='card__container'>
-                        <div className="pro__image-container ctX"></div>
-                        <Content nombre="Carla del Valle Cárdenas" pais="Colombia, Pereira" especialidad="Pediatra" />
-                    </div>
-
-                    <div className='card__container'>
-                        <div className="pro__image-container ctX"></div>
-                        <Content nombre="Dario Botero" pais="Colombia, Bogotá" especialidad="Pediatra" />
-                    </div>
-
-                    <div className='card__container'>
-                        <div className="pro__image-container ctX"></div>
-                        <Content nombre="Amparo Diaz" pais="Colombia, Bogotá" especialidad="Pediatra" />
-                    </div>
-
-                    <div className='card__container'>
-                        <div className="pro__image-container ctX"></div>
-                        <Content nombre="Maria Alejandra Montaño" pais="Colombia, Bogotá" especialidad="Pediatra" />
-                    </div>
-
-                    <div className='card__container'>
-                        <div className="pro__image-container ctX"></div>
-                        <Content nombre="Eliana Ocampo" pais="Colombia, Monteria" especialidad="Pediatra" />
-                    </div>
-
-                    <div className='card__container'>
-                        <div className="pro__image-container ctX"></div>
-                        <Content nombre="Maritza Franco López" pais="Colombia, Bogotá" />
-                    </div>
-
-                    <div className='card__container'>
-                        <div className="pro__image-container ctX"></div>
-                        <Content nombre="Carolina Ibañez" pais="Chile, Santiago" especialidad="Pediatra Infectóloga" />
-                    </div>
-
-                    <div className='card__container'>
-                        <div className="pro__image-container ctX"></div>
-                        <Content nombre="Carlos Sánchez" pais="Colombia, Cartagena" />
-                    </div>
-
-                    <div className='card__container'>
-                        <div className="pro__image-container ctX"></div>
-                        <Content nombre="Yira Torres" pais="Colombia, Bogotá" especialidad="Pediatra" />
-                    </div>
-
-                    
+                    <NoProfileUser nombre="Carla del Valle Cárdenas" pais="Colombia, Pereira" especialidad="Pediatra" />
+                    <NoProfileUser nombre="Dario Botero" pais="Colombia, Bogotá" especialidad="Pediatra" />
+                    <NoProfileUser nombre="Amparo Diaz" pais="Colombia, Bogotá" especialidad="Pediatra" />
+                    <NoProfileUser nombre="Maria Alejandra Montaño" pais="Colombia, Bogotá" especialidad="Pediatra" />
+                    <NoProfileUser nombre="Eliana Ocampo" pais="Colombia, Monteria" especialidad="Pediatra" />
+                    <NoProfileUser nombre="Maritza Franco López" pais="Colombia, Bogotá" especialidad="Pediatra" />
+                    <NoProfileUser nombre="Carolina Ibañez" pais="Chile, Santiago" especialidad="Pediatra Infectóloga" />
+                    <NoProfileUser nombre="Carlos Sánchez" pais="Colombia, Cartagena" />
+                    <NoProfileUser nombre="Yira Torres" pais="Colombia, Bogotá" especialidad="Pediatra" />
                 </div>
 
                 <div className='card__button-oculto' id='mas'>
@@ -148,6 +107,7 @@ const Pro = () => {
                     </button>
                     Ver menos
                 </div>
+
             </div>
         </div>
     )

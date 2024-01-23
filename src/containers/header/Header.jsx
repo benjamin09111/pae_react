@@ -1,6 +1,8 @@
-import React from "react";
+import {React, lazy} from "react";
 import images from "../../constant/images";
 import "./header.css";
+
+const Instruct = lazy(() => import("../../components/instruccion/Instruct"))
 
 const Header = () => {
     return (
@@ -22,25 +24,11 @@ const Header = () => {
                 </div>
 
                 <div className="app__header-diagram">
-                    <div className="app__header-diagram__content">
-                        <img src={images.n1} alt="numero1" />
-                        <p>Accede e inicia con el botón de nuestra página</p>
-                    </div>
-                    <div className="app__header-diagram__content">
-                        <img src={images.n2} alt="numero2" />
-                        <p>Indica el tipo de consulta y síntomas </p>
-                    </div>
-                    <div className="app__header-diagram__content">
-                        <img src={images.n3} alt="numero3" />
-                        <p>
-                            Paga por el tipo de servicio: consulta inmediata o pregunta al
-                            doctor
-                        </p>
-                    </div>
-                    <div className="app__header-diagram__content">
-                        <img src={images.n4} alt="numero4" />
-                        <p>Envía tus datos y espera tu respuesta</p>
-                    </div>
+                    <Instruct image={images.n1} texto="Accede e inicia con el botón de nuestra página"/>
+                    <Instruct image={images.n2} texto="Indica el tipo de consulta y síntomas"/>
+                    <Instruct image={images.n3} texto="Paga por el tipo de servicio: consulta inmediata o pregunta al
+                    doctor"/>
+                    <Instruct image={images.n4} texto="Envía tus datos y espera tu respuesta"/>
                 </div>
             </div>
 
