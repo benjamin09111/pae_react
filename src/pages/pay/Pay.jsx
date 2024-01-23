@@ -1,4 +1,4 @@
-import {React, useState, lazy} from "react";
+import { React, useState, lazy } from "react";
 import images from "../../constant/images";
 import { FaCheckCircle } from "react-icons/fa";
 import "./pay.css";
@@ -117,7 +117,7 @@ const PagarPregunta = () => {
   return (
     <article id="pagarpregunta" className="pagar__container">
       <div className="xContainer">
-        <h3>Pregunta</h3>
+        <h3>Pregunta al Doctor</h3>
         <b onClick={cerrarPregunta}>&times;</b>
       </div>
       <div className="pagar_contenedor_inputs">
@@ -144,27 +144,126 @@ const PagarPregunta = () => {
 };
 
 const PagarTeleconsulta = () => {
-  return (
-    <article id="pagarteleconsulta" className="pagar__container">
-      <div className="xContainer">
-        <h3>Teleconsulta</h3>
-        <b onClick={cerrarTeleconsulta}>&times;</b>
-      </div>
-      <div className="pagar_contenedor_inputs">
-        <div>
-          <label htmlFor="name">Nombre: </label>
-          <input type="text" name="name" id="name" required />
-        </div>
-        <div>
-          <label htmlFor="age">Edad: </label>
-          <input type="text" id="age" name="age" />
-        </div>
-      </div>
+  const [temaC, setTemaConsulta] = useState("");
 
-      <div className="pagar__buton-container">
-        <button type="submit">Ir a pagar $20 US</button>
+  const handleTemaConsultaChange = (event) => {
+    const nuevoValor = event.target.checked ? 'tienehijos' : '';
+    setTemaConsulta(nuevoValor);
+  };
+
+  return (
+    <form id="pagarteleconsulta" className="teleconsulta_pay">
+      <div className="contenedor_pagar-teleconsulta2">
+        <div className="xContainer">
+          <h3 className="h3_teleconsulta">Teleconsulta</h3>
+          <b onClick={cerrarTeleconsulta}>&times;</b>
+        </div>
+        <div className="pagar_contenedor_inputs2">
+          <div>
+            <label htmlFor="name">Nombre: </label>
+            <input type="text" name="name" id="name" required />
+          </div>
+          <div>
+            <label htmlFor="lastname">Apellido: </label>
+            <input type="text" name="lastname" id="lastname" required />
+          </div>
+          <div>
+            <label htmlFor="age">Edad: </label>
+            <input type="text" id="age" name="age" />
+          </div>
+          <div className="fecha_div">
+            <label htmlFor="nacimiento">Fecha de nacimiento de la madre: </label>
+            <input type="date" name="nacimiento" id="nacimiento" required />
+          </div>
+          <div className="fecha_div">
+            <label htmlFor="fecha_parto">Fecha estimada de parto: </label>
+            <input type="date" name="fecha_parto" id="fecha_parto" required />
+          </div>
+          <div className="div__tipo-embarazo">
+            <h4>Tipo de embarazo</h4>
+            <div>
+              <label htmlFor="o1">Simple</label>
+              <input
+                type="radio"
+                id="o1"
+                name="option"
+                value="simple"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="opcion2">Múltiple</label>
+              <input
+                type="radio"
+                id="opcion2"
+                name="option"
+                value="multiple"
+              />
+            </div>
+
+
+          </div>
+          <div>
+            <label htmlFor="estatura_madre">Estatura de la madre (metros): </label>
+            <input type="text" name="estatura_madre" id="estatura_madre" required />
+          </div>
+          <div>
+            <label htmlFor="peso_madre">Peso de la madre (kg): </label>
+            <input type="text" name="peso_madre" id="peso_madre" required />
+          </div>
+          <div id="new" className="container__embarazada-antes">
+            <label htmlFor="embarazada">Ya he estado embarazada antes</label>
+            <input
+              type="checkbox"
+              id="embarazada"
+              name="embarazada"
+              value="tienehijos"
+              checked={temaC === "tienehijos"}
+              onChange={handleTemaConsultaChange}
+            />
+          </div>
+          <div>
+            {temaC === "tienehijos" && (
+              <div className="contenedor_hijos">
+                <div>
+                  <label htmlFor="cantidad_hijos">¿Cuántos hijos tiene?</label>
+                  <input type="number" name="cantidad_hijos" id="cantidad_hijos" required />
+                </div>
+              </div>
+            )}
+          </div>
+          <div className="preguntas_finales-container">
+            <div>
+              <label htmlFor="perdido_bebe">¿Has perdido un bebé?</label>
+              <input type="checkbox" name="perdido_bebe" id="perdido_bebe" required />
+            </div>
+            <div>
+              <label htmlFor="fuma">¿Fumas?</label>
+              <input type="checkbox" name="fuma" id="fuma" required />
+            </div>
+            <div>
+              <label htmlFor="alcohol">¿Bebes alcohol?</label>
+              <input type="checkbox" name="alcohol" id="alcohol" required />
+            </div>
+            <div>
+              <label htmlFor="droga">¿Consumes algún tipo de droga?</label>
+              <input type="checkbox" name="droga" id="droga" required />
+            </div>
+            <div>
+              <label htmlFor="discapacidad">¿Tienes algún tipo de discapacidad?</label>
+              <input type="checkbox" name="discapacidad" id="discapacidad" required />
+            </div>
+            <div>
+              <label htmlFor="ejercicio">¿Te ejercitas? </label>
+              <input type="checkbox" name="ejercicio" id="ejercicio" required />
+            </div>
+          </div>
+          <div className="pagar__buton-container">
+          <button type="submit">Ir a pagar $20 US</button>
+        </div>
+        </div>
       </div>
-    </article>
+    </form>
   );
 };
 
@@ -189,6 +288,11 @@ const Pay = () => {
       <PagarPregunta />
       <PagarTeleconsulta />
       <form onSubmit={handleSubmit} className="begin__form-container">
+        <div className="begin__logo-container">
+          <img src={images.logo} alt="logo" />
+          <h5>Pregúntale al Experto</h5>
+          <p>Realiza tu teleconsulta rápidamente</p>
+        </div>
         <div className="begin__form-container-1">
           <div className="begin__form uno">
             <h2>Temática</h2>
@@ -235,9 +339,11 @@ const Pay = () => {
             <h2>Síntomas</h2>
             <p>Luego, seleccione síntomas: </p>
 
-            {temaConsulta === "embarazo" && <SintomasMadre />}
-            {temaConsulta === "bebe" && <SintomasBebe />}
-            {temaConsulta === "postparto" && <SintomasPostparto />}
+            <div>
+              {temaConsulta === "embarazo" && <SintomasMadre />}
+              {temaConsulta === "bebe" && <SintomasBebe />}
+              {temaConsulta === "postparto" && <SintomasPostparto />}
+            </div>
           </div>
         </div>
 
@@ -253,10 +359,10 @@ const Pay = () => {
             <div className="begin__form-option">
               <h3>Pregúntale al Doctor</h3>
               <p>
-                <FaCheckCircle className="circle_check"/> Respuesta en menos de 2 horas.
+                <FaCheckCircle className="circle_check" /> Respuesta en menos de 2 horas.
               </p>
               <p>
-                <FaCheckCircle className="circle_check"/> Pedíatras, ginecólogos, médicos especialistas
+                <FaCheckCircle className="circle_check" /> Pedíatras, ginecólogos, médicos especialistas
                 en el embarazo.
               </p>
               <div className="begin__final-buton">
@@ -268,10 +374,10 @@ const Pay = () => {
             <div className="begin__form-option">
               <h3>Teleconsulta</h3>
               <p>
-                <FaCheckCircle className="circle_check"/> Teleconsulta de 15 minutos.
+                <FaCheckCircle className="circle_check" /> Teleconsulta de 15 minutos.
               </p>
               <p>
-                <FaCheckCircle className="circle_check"/> Expertos en el área para responder sus dudas.
+                <FaCheckCircle className="circle_check" /> Expertos en el área para responder sus dudas.
               </p>
               <div className="begin__final-buton">
                 <button onClick={abrirTeleconsulta} type="button">
@@ -283,10 +389,6 @@ const Pay = () => {
         </div>
       </form>
       <div className="overlay__fondo" id="overlayfondo"></div>
-      <div className="app__header-image">
-        <div className="app__header-overlay"></div>
-        <img src={images.b1} alt="background" />
-      </div>
     </main>
   );
 };
